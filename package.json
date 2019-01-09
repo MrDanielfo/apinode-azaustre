@@ -1,0 +1,31 @@
+{
+  "name": "azaustre-apinode",
+  "version": "1.0.0",
+  "description": "API con Nodejs",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "api",
+    "web",
+    "javascript"
+  ],
+  "author": "Josué Daniel Flores",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

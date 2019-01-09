@@ -1,0 +1,43 @@
+
+<form id="loginForm" method="POST">
+    <input type="email" name="email" placeholder="Tu email">
+    <br>
+    <br>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+    <br>
+    <input type="submit" id="btnLogin" value="Login">
+</form>
+
+
+<script>
+    const loginForm = document.getElementById('loginForm');
+    eventListeners()
+
+    const formData = new FormData(loginForm)
+
+
+    function eventListeners() {
+        loginForm.addEventListener('submit', loginUser)
+    }
+
+    function loginUser(e) {
+        e.preventDefault()
+        fetch('/users/signin', {
+            method: 'POST',
+            body : formData
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            localStorage.setItem('token', data.token)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+
+
+</script>
